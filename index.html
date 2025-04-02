@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio de Yannis Dejean</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle">Changer le thème</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1 id="typewriter">Chaque ligne de code est un pas vers l’avenir</h1>
+      <p>Faire des maths, de la chimie et du code : parce qu’une passion ne suffit pas !</p>
+    </section>
+
+    <section id="about">
+      <h2>À propos</h2>
+      <p>Passionné par le code et la résolution de problèmes, je cherche à utiliser mes compétences analytiques acquises en mathématiques et chimie dans le domaine de l'informatique.</p>
+    </section>
+
+    <section id="timeline">
+      <h2>Mon Parcours</h2>
+      <div class="timeline">
+        <!-- Événement 1 -->
+        <div class="event">
+          <h3>2025-2027 : Ingénieur/Designer UX-UI en Alternance</h3>
+          <p>Actuellement en recherche d'alternance dans le domaine de l'informatique, combinant expertise en data science et gestion de projets IT.</p>
+        </div>
+        <!-- Événement 2 -->
+        <div class="event">
+          <h3>2024 : Licence Chimie Biochimie</h3>
+          <p>Obtention de la licence à CYU Cergy-Pontoise, consolidant mes connaissances scientifiques.</p>
+        </div>
+        <!-- Événement 3 -->
+        <div class="event">
+          <h3>2023 : Stage - Statisticien, Banque de France</h3>
+          <p>Manipulation de bases de données avec Python et SQL. Développement d’outils d’analyse prédictive pour des recommandations stratégiques.</p>
+        </div>
+        <!-- Événement 4 -->
+        <div class="event">
+          <h3>2023 : Licence Mathématiques Appliquées</h3>
+          <p>Spécialisation en finance à CYU Cergy-Pontoise avec TOEIC niveau C1 en anglais.</p>
+        </div>
+      </div>
+    </section>
+    
+    <section id="projects">
+      <div class="project">
+        <h3>Calculatrice JavaScript</h3>
+        <p>Une calculatrice interactive développée avec HTML, CSS et JavaScript. Permet d'effectuer des calculs de base avec une interface conviviale.</p>
+        <div class="calculator">
+          <input type="text" id="result" readonly>
+          <div class="buttons">
+              <button onclick="appendNumber('7')">7</button>
+              <button onclick="appendNumber('8')">8</button>
+              <button onclick="appendNumber('9')">9</button>
+              <button onclick="chooseOperation('/')">/</button>
+              <button onclick="appendNumber('4')">4</button>
+              <button onclick="appendNumber('5')">5</button>
+              <button onclick="appendNumber('6')">6</button>
+              <button onclick="chooseOperation('*')">*</button>
+              <button onclick="appendNumber('1')">1</button>
+              <button onclick="appendNumber('2')">2</button>
+              <button onclick="appendNumber('3')">3</button>
+              <button onclick="chooseOperation('-')">-</button>
+              <button onclick="appendNumber('0')">0</button>
+              <button onclick="computeSquare()">x²</button>
+              <button onclick="computeSquareRoot()">√</button>
+              <button onclick="chooseOperation('+')">+</button>
+              <button onclick="computeResult()">=</button>
+              <button onclick="clearResult()">C</button>
+          </div>
+          <div id="history" class="calculator-history"></div>
+      </div>
+  </div>
+  
+      <div class="project">
+        <h3>Convertisseur d’unités</h3>
+        <p>Un outil pour convertir rapidement des unités scientifiques.</p>
+        <a href="#" target="_blank">Voir le projet</a>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <h2>Contactez-moi</h2>
+        <p>Je serais ravi de répondre à vos questions ou de discuter de vos projets !</p>
+        <form>
+          <div class="form-group">
+            <label for="name">Nom</label>
+            <input type="text" id="name" placeholder="Votre nom" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Votre adresse email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Votre message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn">Envoyer</button>
+        </form>
+      </div>
+    </section>    
+  </main>
+
+  <footer>
+    <p>© 2024 Yannis Dejean. Tous droits réservés.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

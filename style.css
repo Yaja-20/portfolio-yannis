@@ -1,0 +1,345 @@
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #1e1e2f;
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  }
+  
+  
+  /* Navigation */
+  header {
+    background: #333;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  header ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  header ul li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  header ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  header ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Hero section */
+  .hero {
+    text-align: center;
+    padding: 50px;
+    background: #282a36;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Sections */
+  section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+  }
+  
+  .project {
+    background: #444;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+  }
+  
+  .project h3 {
+    margin: 0 0 10px;
+  }
+  
+  .project a {
+    color: #1e90ff;
+    text-decoration: none;
+  }
+  
+  .project a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Formulaire */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form label {
+    margin-top: 10px;
+  }
+  
+  form input,
+  form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+    color: #000;
+  }
+  
+  form button {
+    margin-top: 15px;
+    padding: 10px;
+    background: #1e90ff;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  form button:hover {
+    background: #4169e1;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    margin-top: 20px;
+  }
+  
+ /* Calculatrice */
+ .calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrer horizontalement */
+  justify-content: center; /* Centrer verticalement si nécessaire */
+  margin: 0 auto; /* Centrer la calculatrice dans la page */
+}
+
+/* Résultat */
+#result {
+  width: 90%; /* Adapte la largeur à l'intérieur de la calculatrice */
+  margin: 10px 0; /* Ajoute un espacement vertical */
+  text-align: right; /* Texte aligné à droite comme dans une vraie calculatrice */
+  font-size: 1.5em; /* Taille de la police pour une meilleure lisibilité */
+  padding: 10px; /* Ajoute de l'espace à l'intérieur de l'écran */
+  border: 1px solid #ccc; /* Style de bordure */
+  border-radius: 5px; /* Bordure arrondie pour un look moderne */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Légère ombre pour un effet esthétique */
+  background-color: #fff; /* Fond blanc pour contraster */
+}
+
+/* Historique */
+.history {
+  background-color: #2c2c2c; /* Couleur de fond sombre */
+  color: #ffffff; /* Texte blanc */
+  width: 90%; /* Largeur adaptée à la calculatrice */
+  margin: 10px auto; /* Centrer horizontalement */
+  padding: 10px; /* Espacement interne */
+  border-radius: 5px; /* Bordures arrondies */
+  font-size: 1rem; /* Taille de texte lisible */
+  max-height: 150px; /* Limite la hauteur */
+  overflow-y: auto; /* Permet un défilement si le contenu dépasse */
+  border: 1px solid #444; /* Optionnel : bordure pour mieux démarquer */
+}
+
+/* Boutons */
+.calculator .buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+.calculator button {
+  padding: 1rem;
+  font-size: 1.2rem;
+  background-color: var(--button-bg, #007bff);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.calculator button:hover {
+  background-color: var(--button-hover-bg, #0056b3);
+}
+
+.calculator button:active {
+  transform: scale(0.95);
+}
+
+/* Thème sombre */
+.dark-mode {
+  --bg-color: #1e1e2f;
+  --text-color: #fff;
+  --button-bg: #444;
+  --button-hover-bg: #666;
+}
+
+/* Section timeline */
+#timeline {
+  padding: 2rem;
+  background-color: #1e1e2f;
+  color: #fff;
+}
+
+#timeline h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.timeline {
+  border-left: 2px solid #007bff;
+  padding: 1rem;
+  position: relative;
+}
+
+.event {
+  position: relative;
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.event h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #007bff;
+}
+
+.event p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.event::before {
+  content: '';
+  position: absolute;
+  left: -9px;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  background-color: #007bff;
+  border-radius: 50%;
+  border: 2px solid #1e1e2f;
+}
+
+.event:last-child::after {
+  content: '';
+  position: absolute;
+  left: -1px;
+  bottom: -1.5rem;
+  height: 1.5rem;
+  width: 2px;
+  background-color: #007bff;
+}
+
+.event {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.event.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#contact {
+  padding: 2rem;
+  background-color: var(--secondary-bg);
+  color: var(--text-color);
+  max-width: 600px;
+  margin: 2rem auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#contact p {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form label {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid var(--border-color, #ccc); /* Couleur de la bordure */
+  border-radius: 4px;
+  background-color: var(--input-bg, #fff); /* Couleur de fond des champs */
+  color: var(--text-color-dark, #000); /* Couleur du texte dans les champs */
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: var(--placeholder-color, #888); /* Couleur des placeholders */
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: var(--button-bg, #007bff); /* Bordure plus visible au focus */
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5); /* Effet visuel au focus */
+}
+
+form button {
+  padding: 0.8rem;
+  font-size: 1rem;
+  background-color: var(--button-bg, #007bff); /* Couleur du bouton */
+  color: var(--button-text-color, #fff); /* Couleur du texte du bouton */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: var(--button-hover-bg, #0056b3); /* Couleur au survol */
+}
+
+
+/* Responsivité */
+@media (max-width: 768px) {
+  #contact {
+    padding: 1rem;
+  }
+
+  form input,
+  form textarea {
+    font-size: 0.9rem;
+  }
+
+  form button {
+    font-size: 0.9rem;
+  }
+}
