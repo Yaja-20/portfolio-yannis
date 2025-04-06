@@ -30,31 +30,46 @@
     </section>
 
     <section id="timeline">
-      <h2>Mon Parcours</h2>
-      <div class="timeline">
-        <!-- Événement 1 -->
-        <div class="event">
-          <h3>2025-2027 : Ingénieur/Designer UX-UI en Alternance</h3>
-          <p>Actuellement en recherche d'alternance dans le domaine de l'informatique, combinant expertise en data science et gestion de projets IT.</p>
+      <section id="timeline">
+        <h2>Mon Parcours</h2>
+      
+        <h3 class="timeline-title">🎓 Parcours académique</h3>
+        <div class="timeline">
+          <div class="event">
+            <h3>2025 – 2027 : Bachelor 3 UX/UI – Création & Digital Design</h3>
+            <p>Ynov Val d’Europe – Formation en design d’interfaces, UX, prototypage et conception digitale.</p>
+          </div>
+          <div class="event">
+            <h3>2024 : Master 1 Mathématiques</h3>
+            <p>CYU Cergy-Pontoise – Approfondissement en analyse de données, logique et modélisation mathématique.</p>
+          </div>
+          <div class="event">
+            <h3>2023 : Licence 3 Chimie Biochimie</h3>
+            <p>CYU Cergy-Pontoise – Spécialisation en chimie analytique et biochimie appliquée.</p>
+          </div>
         </div>
-        <!-- Événement 2 -->
-        <div class="event">
-          <h3>2024 : Licence Chimie Biochimie</h3>
-          <p>Obtention de la licence à CYU Cergy-Pontoise, consolidant mes connaissances scientifiques.</p>
+      
+        <h3 class="timeline-title">💼 Expérience professionnelle</h3>
+        <div class="timeline">
+          <div class="event">
+            <h3>2025 : Professeur de mathématiques contractuel</h3>
+            <p>Éducation Nationale – Enseignement et pédagogie numérique au collège et lycée.</p>
+          </div>
+          <div class="event">
+            <h3>2024 : Visual Merchandiser / eMerch</h3>
+            <p>Fabrique de Style – Conception d’expériences visuelles immersives et optimisation du parcours client.</p>
+          </div>
+          <div class="event">
+            <h3>2023 : Statisticien – Banque de France</h3>
+            <p>Préparation, visualisation et modélisation de données avec Python, SAS et SQL pour des analyses stratégiques.</p>
+          </div>
+          <div class="event">
+            <h3>2020 – 2021 : Développeur Frontend (Freelance)</h3>
+            <p>Création de sites web sous WordPress avec customisation HTML/CSS/JavaScript. UX/UI sur Figma.</p>
+          </div>
         </div>
-        <!-- Événement 3 -->
-        <div class="event">
-          <h3>2023 : Stage - Statisticien, Banque de France</h3>
-          <p>Manipulation de bases de données avec Python et SQL. Développement d’outils d’analyse prédictive pour des recommandations stratégiques.</p>
-        </div>
-        <!-- Événement 4 -->
-        <div class="event">
-          <h3>2023 : Licence Mathématiques Appliquées</h3>
-          <p>Spécialisation en finance à CYU Cergy-Pontoise avec TOEIC niveau C1 en anglais.</p>
-        </div>
-      </div>
+      </section>        
     </section>
-    
     <section id="projects">
       <div class="project">
         <h3>Calculatrice JavaScript</h3>
@@ -62,34 +77,35 @@
         <div class="calculator">
           <input type="text" id="result" readonly>
           <div class="buttons">
-              <button onclick="appendNumber('7')">7</button>
-              <button onclick="appendNumber('8')">8</button>
-              <button onclick="appendNumber('9')">9</button>
-              <button onclick="chooseOperation('/')">/</button>
-              <button onclick="appendNumber('4')">4</button>
-              <button onclick="appendNumber('5')">5</button>
-              <button onclick="appendNumber('6')">6</button>
-              <button onclick="chooseOperation('*')">*</button>
-              <button onclick="appendNumber('1')">1</button>
-              <button onclick="appendNumber('2')">2</button>
-              <button onclick="appendNumber('3')">3</button>
-              <button onclick="chooseOperation('-')">-</button>
-              <button onclick="appendNumber('0')">0</button>
-              <button onclick="computeSquare()">x²</button>
-              <button onclick="computeSquareRoot()">√</button>
-              <button onclick="chooseOperation('+')">+</button>
-              <button onclick="computeResult()">=</button>
-              <button onclick="clearResult()">C</button>
+            <button onclick="appendNumber('7')">7</button>
+            <button onclick="appendNumber('8')">8</button>
+            <button onclick="appendNumber('9')">9</button>
+            <button onclick="chooseOperation('/')">/</button>
+            <button onclick="appendNumber('4')">4</button>
+            <button onclick="appendNumber('5')">5</button>
+            <button onclick="appendNumber('6')">6</button>
+            <button onclick="chooseOperation('*')">*</button>
+            <button onclick="appendNumber('1')">1</button>
+            <button onclick="appendNumber('2')">2</button>
+            <button onclick="appendNumber('3')">3</button>
+            <button onclick="chooseOperation('-')">-</button>
+            <button onclick="appendNumber('0')">0</button>
+            <button onclick="computeSquare()">x²</button>
+            <button onclick="computeSquareRoot()">√</button>
+            <button onclick="chooseOperation('+')">+</button>
+            <button onclick="computeResult()">=</button>
+            <button onclick="clearResult()">C</button>
           </div>
           <div id="history" class="calculator-history"></div>
+        </div>
       </div>
-  </div>
-  
       <div class="project">
-        <h3>Convertisseur d’unités</h3>
-        <p>Un outil pour convertir rapidement des unités scientifiques.</p>
-        <a href="#" target="_blank">Voir le projet</a>
+        <h3>Site e-commerce Apex Velocity 🏎️</h3>
+        <p>Un site e-commerce complet designé sur Figma puis codé en HTML/CSS, proposant des produits inspirés de la F1, avec animations, prototype interactif et responsive design.</p>
+        <a href="https://apex-f1-shop.netlify.app/" target="_blank" class="btn">Voir le site</a>
+        <a href="https://www.figma.com/design/zk3SFDXXsEUSSEHmlsM4Is/Apex-Velocity---Home?node-id=2-2&m=dev&t=DEISxfzMdZEtehRU-1" target="_blank" class="btn">Voir la maquette Figma</a>
       </div>
+      <a href="figma.html" class="figma-link">Découvrir mes maquettes Figma</a>
     </section>
 
     <section id="contact" class="contact-section">

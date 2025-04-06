@@ -343,3 +343,103 @@ form button:hover {
     font-size: 0.9rem;
   }
 }
+.timeline-title {
+  font-size: 1.5rem;
+  margin: 2rem 0 1rem;
+  color: #1e90ff;
+  border-bottom: 1px solid #1e90ff;
+  padding-bottom: 0.5rem;
+}
+/* --- Projets Figma --- */
+.project-img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 16px;
+  box-shadow: 0 15px 25px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s;
+}
+
+.project-img:hover {
+  transform: scale(1.03) rotateX(1deg);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  backdrop-filter: blur(6px) brightness(1.1);
+}
+.figma-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem 1rem;
+  justify-items: center;
+}
+
+.project-img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s;
+}
+
+.project-img:hover {
+  transform: scale(1.05) rotateX(2deg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px) brightness(1.15);
+  cursor: pointer;
+}
+.figma-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background: transparent;
+  border: 2px solid #1e90ff;
+  color: #1e90ff;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.figma-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background: #1e90ff;
+  z-index: 0;
+  transition: width 0.4s ease;
+}
+
+.figma-link:hover::before {
+  width: 100%;
+}
+
+.figma-link:hover {
+  color: white;
+}
+
+.figma-link::before {
+  border-radius: 6px;
+}
+
+.figma-link:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(30, 144, 255, 0.4);
+}
+.btn-site {
+  display: inline-block;
+  background: #ff003c; /* Supprime le carré rouge à la main si besoin */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn-site:hover {
+  background: #cc0033; /* Supprime aussi le carré si tu en vois un ici */
+}
