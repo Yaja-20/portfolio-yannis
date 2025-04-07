@@ -93,11 +93,16 @@ function computeResult() {
       return;
   }
 
-  addToHistory(`${prev} ${operation} ${curr}`, computation); // Ajoute à l'historique
+  addToHistory(`${prev} ${operation} ${curr}`, computation);
   currentOperand = computation.toString();
   operation = null;
   previousOperand = "";
   updateDisplay();
+
+  // Animation sur le résultat
+  const resultInput = document.getElementById('result');
+  resultInput.classList.add('animate-result');
+  setTimeout(() => resultInput.classList.remove('animate-result'), 300);
 }
 
 function updateDisplay() {
@@ -121,3 +126,43 @@ window.addEventListener("DOMContentLoaded", () => {
   const contactSection = document.querySelector(".contact-section");
   contactSection.classList.add("loaded");
 });
+function exportHistory() {
+  const history = document.getElementById('history').innerText;
+  const blob = new Blob([history], { type: 'text/plain;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = 'historique_calculs.txt';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+
+  // Affiche le toast uniquement après export
+  const toast = document.getElementById('toast');
+  toast.classList.add('show');
+  setTimeout(() => {
+    toast.classList.remove('show');
+  }, 3000);
+}
+
+// Toast moderne
+function handleSubmit(event) {
+  event.preventDefault(); // Empêche le comportement normal
+  const form = event.target;
+
+  fetch(form.action, {
+    method: "POST",
+    body: new FormData(form),
+    headers: {
+      Accept: "application/json"
+    }
+  }).then(response => {
+    if (response.ok) {
+      window.location.href = "merci.html"; // Redirige après succès
+    } else {
+      alert("Une erreur est survenue. Veuillez réessayer.");
+    }
+  });
+
+  return false; // Assure qu’aucune redirection native n’a lieu
+}

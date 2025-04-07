@@ -118,39 +118,66 @@ body {
   }
   
  /* Calculatrice */
- .calculator {
+.calculator {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centrer horizontalement */
-  justify-content: center; /* Centrer verticalement si nécessaire */
-  margin: 0 auto; /* Centrer la calculatrice dans la page */
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 350px;
+  width: 100%;
+  animation: fadeIn 0.6s ease-in-out;
 }
 
 /* Résultat */
 #result {
-  width: 90%; /* Adapte la largeur à l'intérieur de la calculatrice */
-  margin: 10px 0; /* Ajoute un espacement vertical */
-  text-align: right; /* Texte aligné à droite comme dans une vraie calculatrice */
-  font-size: 1.5em; /* Taille de la police pour une meilleure lisibilité */
-  padding: 10px; /* Ajoute de l'espace à l'intérieur de l'écran */
-  border: 1px solid #ccc; /* Style de bordure */
-  border-radius: 5px; /* Bordure arrondie pour un look moderne */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Légère ombre pour un effet esthétique */
-  background-color: #fff; /* Fond blanc pour contraster */
+  width: 90%;
+  margin: 10px 0;
+  text-align: right;
+  font-size: 1.5em;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#result.animate-result {
+  background-color: #d1ffd6;
+  transform: scale(1.05);
 }
 
 /* Historique */
 .history {
-  background-color: #2c2c2c; /* Couleur de fond sombre */
-  color: #ffffff; /* Texte blanc */
-  width: 90%; /* Largeur adaptée à la calculatrice */
-  margin: 10px auto; /* Centrer horizontalement */
-  padding: 10px; /* Espacement interne */
-  border-radius: 5px; /* Bordures arrondies */
-  font-size: 1rem; /* Taille de texte lisible */
-  max-height: 150px; /* Limite la hauteur */
-  overflow-y: auto; /* Permet un défilement si le contenu dépasse */
-  border: 1px solid #444; /* Optionnel : bordure pour mieux démarquer */
+  background-color: #2c2c2c;
+  color: #ffffff;
+  width: 90%;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  max-height: 150px;
+  overflow-y: auto;
+  border: 1px solid #444;
+  position: relative;
+}
+
+/* Bouton Exporter */
+.export-btn {
+  margin-top: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.export-btn:hover {
+  background-color: #218838;
 }
 
 /* Boutons */
@@ -168,16 +195,26 @@ body {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.1s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .calculator button:hover {
   background-color: var(--button-hover-bg, #0056b3);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
 .calculator button:active {
   transform: scale(0.95);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
+
+/* Animation de chargement */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+} 
 
 /* Thème sombre */
 .dark-mode {
@@ -442,4 +479,24 @@ form button:hover {
 
 .btn-site:hover {
   background: #cc0033; /* Supprime aussi le carré si tu en vois un ici */
+}
+.toast {
+  visibility: hidden;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #28a745;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: visibility 0s, opacity 0.5s ease-in-out;
+  opacity: 0;
+  z-index: 1000;
+}
+
+.toast.show {
+  visibility: visible;
+  opacity: 1;
 }
