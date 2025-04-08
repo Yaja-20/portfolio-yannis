@@ -500,3 +500,86 @@ form button:hover {
   visibility: visible;
   opacity: 1;
 }
+/* Centrage des titres */
+section h2, section h3 {
+  text-align: center;
+}
+
+/* Section Mes projets persos */
+#personal-projects h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-top: 2rem;
+}
+
+/* Boutons Apex Velocity */
+.apex-section {
+  background-color: #444;
+  padding: 2rem;
+  border-radius: 10px;
+  margin: 2rem auto;
+  text-align: center;
+  max-width: 800px;
+}
+
+.apex-section h3 {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.apex-section p {
+  margin: 1rem 0;
+  color: white;
+}
+
+.apex-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.apex-buttons a {
+  background-color: #1e90ff;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.apex-buttons a:hover {
+  background-color: #0077cc;
+}
+
+#skills {
+  padding: 2rem;
+  text-align: center;
+  background-color: #282a36;
+}
+
+#skills h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #1e90ff;
+}
+
+.tools-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.tools-logos img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.tools-logos img:hover {
+  transform: scale(1.1);
+}
