@@ -583,3 +583,50 @@ section h2, section h3 {
 .tools-logos img:hover {
   transform: scale(1.1);
 }
+
+.video-preview-banner {
+  background-color: #1f1f1f;
+  border-left: 4px solid #e5e5e5;
+  padding: 1.2em;
+  margin: 1.5em auto;
+  color: #f0f0f0;
+  font-style: italic;
+  font-size: 1.1rem;
+  font-family: 'Georgia', serif;
+  text-align: center;
+  max-width: 80%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.video-coming-soon {
+  display: block;
+  margin: 1.2em auto;
+  padding: 0.6em 1.5em;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ccc;
+  background-color: transparent;
+  border: 2px solid #ccc;
+  border-radius: 30px;
+  cursor: not-allowed;
+  transition: all 0.3s ease;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.video-coming-soon:hover {
+  border-color: #fff;
+  color: #fff;
+}
