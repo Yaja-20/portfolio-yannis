@@ -660,3 +660,9 @@ section h2, section h3 {
 .apex-buttons a:hover {
   background-color: #3e5870;
 }
+.serif-project {
+  color: white;
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+}
