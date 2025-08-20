@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Éducation & Expériences — Yannis Dejean</title>
+  <meta name="description" content="Parcours académique et expériences professionnelles de Yannis Dejean." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Toast réutilisable -->
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <!-- Même header que l’index pour cohérence (avec bouton Thème) -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Principale">
+      <a class="logo" href="index.html">Yannis<span class="dot">.</span></a>
+      <button id="theme-toggle" aria-label="Changer le thème">Thème</button>
+      <ul class="nav-links">
+        <li><a href="index.html#work">Projets</a></li>
+        <li><a href="education.html" aria-current="page">Éducation & Expériences</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- En-tête page -->
+    <section class="section container">
+      <h1 class="hero-title" style="margin-bottom:.25rem">Éducation & Expériences</h1>
+      <p class="subtle">Parcours académique et expériences récentes.</p>
+      <div class="hero-cta" style="margin-top:.75rem">
+        <a class="btn btn-ghost" href="index.html">← Retour au portfolio</a>
+      </div>
+    </section>
+
+    <!-- ÉDUCATION -->
+    <section class="section container" id="education">
+      <h2 class="section-title">Éducation</h2>
+
+      <ul class="cards-grid">
+        <li class="card">
+          <div class="card-head">
+            <span class="badge">2025 – 2027</span>
+            <h3>Bachelor 3 UX/UI — Création & Digital Design</h3>
+            <p class="meta">Ynov Val d’Europe</p>
+          </div>
+          <p>Design d’interfaces, UX, prototypage, conception digitale et design system léger.</p>
+        </li>
+
+        <li class="card">
+          <div class="card-head">
+            <span class="badge">2023-2024</span>
+            <h3>Master 1 Mathématiques</h3>
+            <p class="meta">CYU Cergy-Pontoise</p>
+          </div>
+          <p>Analyse de données, logique et modélisation mathématique.</p>
+        </li>
+
+        <li class="card">
+          <div class="card-head">
+            <span class="badge">2019-2023</span>
+            <h3>Licence 3 Chimie Biochimie</h3>
+            <p class="meta">CYU Cergy-Pontoise</p>
+          </div>
+          <p>Chimie analytique et biochimie appliquée.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- EXPÉRIENCES -->
+    <section class="section container" id="experience">
+      <h2 class="section-title">Expériences</h2>
+
+        <li class="card">
+          <div class="card-head">
+            <span class="badge">2025</span>
+            <h3>Professeur de mathématiques (contractuel)</h3>
+            <p class="meta">Éducation Nationale</p>
+          </div>
+          <p>Pédagogie et outils numériques (collège/lycée).</p>
+        </li>
+
+        <li class="card">
+          <div class="card-head">
+            <span class="badge">2024</span>
+            <h3>Visual Merchandiser / eMerch</h3>
+            <p class="meta">Fabrique de Style</p>
+          </div>
+          <p>Expériences visuelles, vitrines, création de campagnes de newsletter et optimisation parcours client physique et virtuel.</p>
+        </li>
+
+        <li class="card">
+          <div class="card-head">
+            <span class="badge">2023</span>
+            <h3>Statisticien</h3>
+            <p class="meta">Banque de France</p>
+          </div>
+          <p>Préparation, visualisation et modélisation de données (Python, SAS, SQL).</p>
+        </li>
+
+        <li class="card">
+          <div class="card-head">
+            <span class="badge">2020 – 2021</span>
+            <h3>Développeur Frontend (freelance)</h3>
+            <p class="meta">WordPress / HTML / CSS / JS</p>
+          </div>
+          <p>Création de sites, personnalisation de thèmes, UX/UI sur Figma/Adobe XD.</p>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Yannis Dejean</p>
+    </div>
+  </footer>
+
+  <!-- on réutilise ton JS existant (thème, reveals, etc.) -->
+  <script src="script.js" defer></script>
+</body>
+</html>

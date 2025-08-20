@@ -1,223 +1,227 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio de Yannis Dejean</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yannis Dejean — UX/UI Designer</title>
+  <meta name="description" content="UX/UI Designer — Projets, méthodes et contact." />
+  <link rel="stylesheet" href="style.css" />
 </head>
-<div id="toast" class="toast">Historique exporté avec succès !</div>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#about">À propos</a></li>
-        <li><a href="#projects">Projets</a></li>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden>
+    Historique exporté avec succès !
+  </div>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Principale">
+      <a class="logo" href="/">Yannis<span class="dot">.</span></a>
+      <button id="theme-toggle" aria-label="Changer le thème">Thème</button>
+      <ul class="nav-links">
+        <li><a href="#work">Projets</a></li>
+        <li><a href="#capabilities">Compétences</a></li>
+        <li><a href="#process">Méthode</a></li>
+        <li><a href="#testimonials">Avis</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a href="education.html">Éducation & Expériences</a></li>
       </ul>
     </nav>
-    <button id="theme-toggle">Changer le thème</button>
   </header>
 
   <main>
-    <section class="hero">
-      <h1 id="typewriter">Chaque ligne de code est un pas vers l’avenir</h1>
-      <p>Faire des maths, de la chimie et du code : parce qu’une passion ne suffit pas !</p>
-    </section>
-
-    <section id="about">
-      <h2>À propos</h2>
-      <p>Autodidacte passionné de design et de résolution de problèmes, j’ai troqué les équations et les molécules pour les interfaces et les expériences utilisateurs. Mon objectif ? Créer des solutions digitales utiles, accessibles et engageantes, en mêlant rigueur scientifique et créativité.</p>
-    </section>
-    
-    <div class="video-preview-banner">
-      🎥 Une courte vidéo de présentation est en cours de réalisation et sera disponible très bientôt sur ce portfolio.
-    </div>
-    <button class="video-coming-soon" disabled>🎥 Regarder bientôt</button>
-
-    <section id="skills">
-      <h2>🛠️ Logiciels maîtrisés</h2>
-      <div class="tools-logos">
-        <img src="images/logos/figma.png" alt="Figma">
-        <img src="images/logos/photoshop.png" alt="Photoshop">
-        <img src="images/logos/canva.png" alt="Canva">
-        <img src="images/logos/adobexd.png" alt="Adobe XD">
-        <img src="images/logos/jira.png" alt="Jira">
-        <img src="images/logos/excel.png" alt="Excel">
+    <!-- HERO -->
+    <section class="hero container" id="hero">
+      <h1 class="hero-title">UX/UI Designer — créer des interfaces utiles, claires et performantes.</h1>
+      <p class="hero-sub">De la recherche à l’interface, j’aide à livrer des expériences qui fonctionnent.</p>
+      <div class="hero-cta">
+        <a class="btn" href="#work">Voir les projets</a>
+        <a class="btn btn-secondary" href="#contact">Me contacter</a>
       </div>
     </section>
-    
-<section id="projects">
 
-  <!-- Projet Signal Perdu -->
-  <div class="project">
-    <h3>Signal Perdu 🔍</h3>
-    <p>
-      Jeu narratif interactif en cours de développement, combinant UX writing, interface sombre, effets sonores et ambiance mystérieuse.<br>
-      Réalisé en HTML/CSS/JavaScript + After Effects pour les animations. <br>
-      <strong>Sortie estimée dans :</strong> <span id="countdown"></span>
-    </p>
+<!-- RECENT WORK -->
+<section class="section container" id="work">
+  <h2 class="section-title">Projects</h2>
+  <p class="subtle">Fais défiler et clique sur un bouton pour ouvrir le projet.</p>
 
-    <div class="apex-buttons">
-      <a href="https://www.figma.com/design/DQpiNAx3nlh5wE1pDrFdLM/Signal-Perdu?node-id=0-1&m=dev&t=FaktBj4QDNCB1fAU-1" target="_blank">🎨 Prototype Figma</a>
-      <a href="https://www.figma.com/board/t6cxomvA3QXp7foy24q3Xv/User-Flow---Signal-Perdu?node-id=0-1&t=HjXUkc0sCfLW3DH2-1" target="_blank">🧠 User-Flow FigJam</a>
-      <a href="https://www.notion.so/Jeux-Int-ractif-Signal-Perdu-2108f4e6cf64809ea12fc2b1352255a6?source=copy_link" target="_blank">📘 Notes & Documentation (Notion)</a>
+  <div class="carousel" aria-roledescription="carousel">
+    <button class="carousel-btn prev" aria-label="Projet précédent">‹</button>
+
+    <!-- PISTE: tous les slides doivent être ENFANTS directs de cette <ul> -->
+    <ul class="carousel-track" role="group" aria-live="polite">
+
+<!-- Slide 1 -->
+<li class="slide is-current" id="slide-1">
+  <div class="slide-card">
+    <div class="slide-media cover">
+      <img src="images/projects/apex-thumb.jpg" alt="Apex Velocity — e-commerce F1" loading="lazy">
     </div>
-
-    <button class="disabled-btn" disabled>🎮 Jeu jouable disponible dans 8 jours</button>
-  </div>
-  <!-- Projet Newsletter promotionnelle pour Place des Tendances -->
-   <div class="project">
-    <h3>Exercice technique Newsletter promotionnelle pour Place des Tendances</h3>
-    <p>
-      Cet exercice m’a été confié dans le cadre d’un processus de recrutement pour une alternance en webdesign/UX. L’objectif : réaliser une newsletter estivale en respectant l’univers visuel de la marque, tout en proposant une mise en page cohérente et impactante sur le thème des vacances.
-    </p>
-    <div class="apex-buttons">
-      <a href="wireframe/Wireframe Newsletter V2.pdf">📄 Voir la newsletter</a>
-    </div>
-   </div>
-
-  <!-- Projet Apex Velocity -->
-  <div class="project">
-    <h3>Site e-commerce Apex Velocity 🏎️</h3>
-    <p>
-      Un site e-commerce complet designé sur Figma puis codé en HTML/CSS, proposant des produits inspirés de la F1, avec animations, prototype interactif et responsive design.
-    </p>
-    <div class="apex-buttons">
-      <a href="https://apex-f1-shop.netlify.app/" target="_blank">Voir le site</a>
-      <a href="https://www.figma.com/design/zk3SFDXXsEUSSEHmlsM4Is/Apex-Velocity---Home?node-id=2-2&m=dev&t=DEISxfzMdZEtehRU-1" target="_blank">Voir la maquette Figma</a>
+    <div class="slide-meta">
+      <h3>Apex Velocity — e-commerce F1</h3>
+      <p>UI e-commerce, cartes produits, hero immersif, responsive.</p>
+      <div class="slide-actions">
+        <a class="btn btn-sm" href="https://apex-f1-shop.netlify.app/" target="_blank" rel="noopener">Voir le site</a>
+        <a class="btn btn-sm btn-ghost" href="https://www.figma.com/design/zk3SFDXXsEUSSEHmlsM4Is/Apex-Velocity---Home?node-id=2-2" target="_blank" rel="noopener">Maquette</a>
+      </div>
     </div>
   </div>
+</li>
 
-  <!-- Projet SERIF -->
-<div class="project serif-project" style="background-image: url('images/serif-cover.jpg'); background-size: cover; background-position: center;">
-  <h3>Projet fictif SERIF 🧵</h3>
-  <p>
-    Direction artistique d’une capsule mode printemps 2025, incluant identité visuelle, moodboard, déclinaison social media et invitation événementielle.
-  </p>
-  <div class="apex-buttons">
-    <a href="documents/serif_projet.pdf" target="_blank">📄 Voir le PDF</a>
-    <a href="videos/serif_invite.mp4" target="_blank">🎥 Voir l'affiche animée</a>
-    <a href="https://www.figma.com/design/yQa2bioMtXZVsAbQtKkb8N/Moodboard-SERIF?node-id=1669-162202&m=dev&t=ps5FPy8tUliGSRcT-1" target="_blank">🎨 Voir sur Figma</a>
-  </div>
-</div>
-
-  <!-- Section maquettes UX/UI -->
-  <div class="project">
-    <h3>🎨 Maquettes Figma UX/UI</h3>
-    <p>
-      Une série de projets conçus sur Figma : refontes d’interfaces, user flows, dashboards bancaires et outils de maintenance.
-    </p>
-    <div class="apex-buttons">
-      <a href="figma.html" target="_blank">Voir toutes les maquettes</a>
+<!-- Slide 2 -->
+<li class="slide" id="slide-2">
+  <div class="slide-card">
+    <div class="slide-media fit">
+      <img src="images/projects/pdt-newsletter.jpg" alt="Newsletter Place des Tendances" loading="lazy">
+    </div>
+    <div class="slide-meta">
+      <h3>Newsletter — Place des Tendances</h3>
+      <p>Exercice technique : grille modulaire, hiérarchie claire.</p>
+      <div class="slide-actions">
+        <a class="btn btn-sm" href="wireframe/Wireframe Newsletter V2.pdf" target="_blank" rel="noopener">Voir le PDF</a>
+      </div>
     </div>
   </div>
+</li>
 
+<!-- Slide 3 -->
+<li class="slide" id="slide-3">
+  <div class="slide-card">
+    <div class="slide-media fit">
+      <img src="images/projects/ux-ui-mocks.jpg" alt="Maquettes UX/UI sur Figma" loading="lazy">
+    </div>
+    <div class="slide-meta">
+      <h3>Maquettes UX/UI</h3>
+      <p>Dashboards, user flows et refontes centrées usage.</p>
+      <div class="slide-actions">
+        <a class="btn btn-sm" href="figma.html" target="_blank" rel="noopener">Voir</a>
+      </div>
+    </div>
+  </div>
+</li>
+
+<!-- Slide 4 -->
+<li class="slide" id="slide-4">
+  <div class="slide-card">
+    <div class="slide-media fit">
+      <img src="images/projects/banking-onboarding.jpg" alt="Onboarding bancaire — ouverture de compte mobile" loading="lazy">
+    </div>
+    <div class="slide-meta">
+      <h3>Onboarding bancaire — ouverture de compte</h3>
+      <p>Parcours mobile en 6 étapes : KYC, scan pièce, selfie, choix d’offre.</p>
+      <div class="slide-actions">
+        <a class="btn btn-sm" href="https://www.figma.com/proto/IXAkPbu1wYpwLgEiP1wjOp/Onboarding-bancaire-mobile?node-id=0-1&t=hgjZOAmu3LVH7RSd-1" target="_blank" rel="noopener">Prototype Figma</a>
+        <a class="btn btn-sm btn-ghost" href="https://www.figma.com/design/IXAkPbu1wYpwLgEiP1wjOp/Onboarding-bancaire-mobile?node-id=0-1&m=dev&t=hgjZOAmu3LVH7RSd-1" target="_blank" rel="noopener">User flow</a>
+      </div>
+    </div>
+  </div>
+</li>
+
+<!-- Slide 5 -->
+<li class="slide" id="slide-5">
+  <div class="slide-card">
+    <div class="slide-media cover">
+      <img src="images/projects/serif-cover.jpg" alt="SERIF — capsule mode, identité et social" loading="lazy">
+    </div>
+    <div class="slide-meta">
+      <h3>SERIF — DA capsule mode</h3>
+      <p>Identité visuelle, moodboard, déclinaisons social, affiche animée.</p>
+      <div class="slide-actions">
+        <a class="btn btn-sm" href="documents/serif_projet.pdf" target="_blank" rel="noopener">Voir le PDF</a>
+        <a class="btn btn-sm btn-ghost" href="videos/serif_invite.mp4" target="_blank" rel="noopener">Affiche animée</a>
+        <a class="btn btn-sm btn-ghost" href="https://www.figma.com/design/yQa2bioMtXZVsAbQtKkb8N/Moodboard-SERIF?node-id=1669-162202" target="_blank" rel="noopener">Moodboard Figma</a>
+      </div>
+    </div>
+  </div>
+</li>
+
+</ul>
+    <!-- FIN de la piste -->
+
+    <button class="carousel-btn next" aria-label="Projet suivant">›</button>
+
+    <div class="carousel-dots" role="tablist" aria-label="Sélection de projet">
+      <button class="dot is-active" role="tab" aria-selected="true"  aria-controls="slide-1">1</button>
+      <button class="dot"          role="tab" aria-selected="false" aria-controls="slide-2">2</button>
+      <button class="dot"          role="tab" aria-selected="false" aria-controls="slide-3">3</button>
+      <button class="dot"          role="tab" aria-selected="false" aria-controls="slide-4">4</button>
+      <button class="dot"          role="tab" aria-selected="false" aria-controls="slide-5">5</button>
+    </div>
+  </div>
 </section>
 
-    <section id="timeline">
-      <h2>Mon Parcours</h2>
+    <!-- CAPABILITIES -->
+    <section class="section container" id="capabilities">
+      <h2 class="section-title">Capabilities</h2>
+      <ul class="capabilities-grid">
+        <li><h3>UX Research</h3><p>Entretiens, parcours, priorisation besoins.</p></li>
+        <li><h3>UI Design</h3><p>Design system léger, composants, responsive.</p></li>
+        <li><h3>Prototypage</h3><p>Figma interactif, tests rapides.</p></li>
+        <li><h3>Intégration</h3><p>HTML/CSS/JS, accessibilité et perf.</p></li>
+        <li><h3>Data-analyse</h3><p>SQL, Python (Pandas, Numpy).</p></li>
+      </ul>
+    </section>
 
-      <h3 class="timeline-title">💼 Expérience professionnelle</h3>
-      <div class="timeline">
-        <div class="event">
-          <h3>2025 : Réalisation d'Apex Velocity</h3>
-          <p>Création complète d’un site e-commerce fictif inspiré de l’univers F1 : branding, design sur Figma, intégration HTML/CSS/JS, publication Netlify.</p>
-        </div>
-        <div class="event">
-          <h3>2025 : Professeur de mathématiques contractuel</h3>
-          <p>Éducation Nationale – Enseignement et pédagogie numérique au collège et lycée.</p>
-        </div>
-        <div class="event">
-          <h3>2024 : Visual Merchandiser / eMerch</h3>
-          <p>Fabrique de Style – Conception d’expériences visuelles immersives et optimisation du parcours client.</p>
-        </div>
-        <div class="event">
-          <h3>2023 : Statisticien – Banque de France</h3>
-          <p>Préparation, visualisation et modélisation de données avec Python, SAS et SQL pour des analyses stratégiques.</p>
-        </div>
-        <div class="event">
-          <h3>2020 – 2021 : Développeur Frontend (Freelance)</h3>
-          <p>Création de sites web sous WordPress avec customisation HTML/CSS/JavaScript. UX/UI sur Figma et Adobe XD.</p>
-        </div>
-      </div>
+    <!-- PROCESS (5 étapes) -->
+    <section class="section container" id="process">
+      <h2 class="section-title">Process</h2>
+      <ol class="process-steps">
+        <li><strong>Discover</strong> — cadrage & objectifs</li>
+        <li><strong>Define</strong> — user flows & priorités</li>
+        <li><strong>Design</strong> — maquettes & design system</li>
+        <li><strong>Prototype</strong> — interactions & test</li>
+        <li><strong>Deliver</strong> — intégration & QA</li>
+      </ol>
+    </section>
 
-      <h3 class="timeline-title">🎓 Parcours académique</h3>
-      <div class="timeline">
-        <div class="event">
-          <h3>2025 – 2027 : Bachelor 3 UX/UI – Création & Digital Design</h3>
-          <p>Ynov Val d’Europe – Formation en design d’interfaces, UX, prototypage et conception digitale.</p>
-        </div>
-        <div class="event">
-          <h3>2024 : Master 1 Mathématiques</h3>
-          <p>CYU Cergy-Pontoise – Approfondissement en analyse de données, logique et modélisation mathématique.</p>
-        </div>
-        <div class="event">
-          <h3>2023 : Licence 3 Chimie Biochimie</h3>
-          <p>CYU Cergy-Pontoise – Spécialisation en chimie analytique et biochimie appliquée.</p>
-        </div>
+    <!-- TESTIMONIALS -->
+    <section class="section container" id="testimonials">
+      <h2 class="section-title">Testimonials</h2>
+      <div class="testimonials">
+        <blockquote class="quote">
+          <p>“Yannis synthétise vite, organise et fourni des benchmarks de qualités.”</p>
+          <footer>— Manager, Statisticien AXA</footer>
+        </blockquote>
+        <blockquote class="quote">
+          <p>“Exigence sur l’accessibilité et la perf, appréciable.”</p>
+          <footer>— Développeur front from Malt</footer>
+        </blockquote>
+        <blockquote class="quote">
+          <p>“Une organisation et une méthodologie particulièrement appréciable, avec un sens du design particulièrement développé.”</p>
+          <footer>— Responsable, communication at Fabrique de style</footer>
+        </blockquote>
       </div>
     </section>
 
-    <section id="calculator">
-      <div class="project">
-        <h3>Calculatrice JavaScript</h3>
-        <p>Une calculatrice interactive développée avec HTML, CSS et JavaScript. Permet d'effectuer des calculs de base avec une interface conviviale.</p>
-        <div class="calculator">
-          <input type="text" id="result" readonly>
-          <div class="buttons">
-            <button onclick="appendNumber('7')">7</button>
-            <button onclick="appendNumber('8')">8</button>
-            <button onclick="appendNumber('9')">9</button>
-            <button onclick="chooseOperation('/')">/</button>
-            <button onclick="appendNumber('4')">4</button>
-            <button onclick="appendNumber('5')">5</button>
-            <button onclick="appendNumber('6')">6</button>
-            <button onclick="chooseOperation('*')">*</button>
-            <button onclick="appendNumber('1')">1</button>
-            <button onclick="appendNumber('2')">2</button>
-            <button onclick="appendNumber('3')">3</button>
-            <button onclick="chooseOperation('-')">-</button>
-            <button onclick="appendNumber('0')">0</button>
-            <button onclick="computeSquare()">x²</button>
-            <button onclick="computeSquareRoot()">√</button>
-            <button onclick="chooseOperation('+')">+</button>
-            <button onclick="computeResult()">=</button>
-            <button onclick="clearResult()">C</button>
-          </div>
-          <div id="history" class="calculator-history"></div>
-          <button class="export-btn" onclick="exportHistory()">Exporter l'historique</button>
-        </div>
+    <!-- CREDENTIALS / LOGOS -->
+    <section class="section container" id="credentials">
+      <h2 class="section-title">Credentials</h2>
+      <div class="logo-grid">
+        <img src="images/logos/figma.png" alt="Figma" />
+        <img src="images/logos/jira.png" alt="Jira" />
+        <img src="images/logos/photoshop.png" alt="Photoshop" />
+        <img src="images/logos/excel.png" alt="Excel" />
+        <img src="images/logos/adobexd.png" alt="Adobexd" />
       </div>
     </section>
 
-    <section id="contact" class="contact-section">
-      <div class="container">
-        <h2>Contactez-moi</h2>
-        <p>Je serais ravi de répondre à vos questions ou de discuter de vos projets !</p>
-        <form action="https://formspree.io/f/mblgpyok" method="POST" onsubmit="return handleSubmit(event)">
-          <div class="form-group">
-            <label for="name">Nom</label>
-            <input type="text" name="name" id="name" placeholder="Votre nom" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="Votre adresse email" required>
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea name="message" id="message" placeholder="Votre message" rows="5" required></textarea>
-          </div>
-          <button type="submit" class="btn">Envoyer</button>
-        </form>
-      </div>
+    <!-- CONTACT -->
+    <section class="section container" id="contact">
+      <h2 class="section-title">Discutons</h2>
+      <form action="https://formspree.io/f/mblgpyok" method="POST" class="contact-form">
+        <label>Nom <input type="text" name="name" required></label>
+        <label>Email <input type="email" name="email" required></label>
+        <label>Message <textarea name="message" rows="5" required></textarea></label>
+        <button type="submit" class="btn">Envoyer</button>
+      </form>
     </section>
   </main>
 
-  <footer>
-    <p>© 2024 Yannis Dejean. Tous droits réservés.</p>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2023 Yannis Dejean. Tous droit réservés.</p>
+    </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
+
