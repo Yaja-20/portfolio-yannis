@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Signal Perdu — Projet en cours | Yannis Dejean</title>
+  <meta name="description" content="Page d’introduction du projet Signal Perdu : concept, objectifs, état d’avancement et maquette Figma.">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Toast global -->
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <!-- Header cohérent avec le site -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Principale">
+      <a class="logo" href="index.html">Yannis<span class="dot">.</span></a>
+      <button id="theme-toggle" aria-label="Changer le thème">Thème</button>
+      <ul class="nav-links">
+        <li><a href="index.html#work">Projets</a></li>
+        <li><a href="signal-perdu.html" aria-current="page">Signal Perdu</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero / Intro -->
+    <section class="section container">
+      <span class="status-badge">En cours</span>
+      <h1 class="hero-title" style="margin:.4rem 0 .5rem">Signal Perdu — jeu narratif interactif</h1>
+      <p class="subtle">Prototype en construction. Cette page présente le concept, les objectifs et les prochaines étapes.</p>
+      <div class="hero-cta" style="margin-top:1rem">
+        <a class="btn" href="https://www.figma.com/design/DQpiNAx3nlh5wE1pDrFdLM/Signal-Perdu?node-id=0-1" target="_blank" rel="noopener">Voir la maquette Figma</a>
+        <a class="btn btn-ghost" href="https://www.figma.com/board/t6cxomvA3QXp7foy24q3Xv/User-Flow---Signal-Perdu?node-id=0-1" target="_blank" rel="noopener">User Flow FigJam</a>
+        <a class="btn btn-secondary" href="https://www.notion.so/Jeux-Int-ractif-Signal-Perdu-2108f4e6cf64809ea12fc2b1352255a6" target="_blank" rel="noopener">Notes & Roadmap</a>
+      </div>
+
+      <div class="wip-banner" role="note">
+        <strong>⚠️ Travail en cours :</strong> le prototype, l’UI et la maquette Figma évoluent activement. Les éléments peuvent changer.
+      </div>
+    </section>
+
+    <!-- Pitch & objectifs -->
+    <section class="section container">
+      <h2 class="section-title">Le concept</h2>
+      <div class="cards-grid">
+        <article class="card">
+          <div class="card-head">
+            <h3>Ambiance & expérience</h3>
+            <p class="meta">UX writing, direction sonore, UI sombre</p>
+          </div>
+          <p>Un court jeu narratif sur le thème du signal radio mystérieux. L’expérience mise sur le rythme, les micro-interactions et des choix simples mais engageants.</p>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <h3>Objectifs UX</h3>
+            <p class="meta">Clarté, tension, accessibilité</p>
+          </div>
+          <ul style="margin:0; padding-left:1.1rem;">
+            <li>Guidage discret (micro-copies & affordances claires)</li>
+            <li>Lecture confortable (contrast, typo, rythme)</li>
+            <li>Compatibilité clavier / mobile</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <h3>Tech & livrables</h3>
+            <p class="meta">HTML/CSS/JS + assets audio</p>
+          </div>
+          <p>Prototype jouable web, maquette Figma, user flow, brief narratif, check-list d’accessibilité et plan de tests.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Aperçu visuel (mockups) -->
+    <section class="section container">
+      <h2 class="section-title">Aperçus (maquette)</h2>
+      <div class="gallery-3">
+        <figure class="mock">
+          <img src="images/signal-perdu/mock-01.jpg" alt="Écran titre — Signal Perdu" loading="lazy">
+          <figcaption>Écran titre / entrée en matière</figcaption>
+        </figure>
+        <figure class="mock">
+          <img src="images/signal-perdu/mock-02.jpg" alt="Écran choix — Signal Perdu" loading="lazy">
+          <figcaption>Choix critique avec feedback audio</figcaption>
+        </figure>
+        <figure class="mock">
+          <img src="images/signal-perdu/mock-03.jpg" alt="Écran lecture — Signal Perdu" loading="lazy">
+          <figcaption>Lecture / journal du signal</figcaption>
+        </figure>
+      </div>
+      <p class="subtle" style="margin-top:.6rem">Visuels non définitifs — sujets à évolution.</p>
+    </section>
+
+    <!-- Roadmap / Avancement -->
+    <section class="section container">
+      <h2 class="section-title">Avancement & prochaines étapes</h2>
+      <ul class="roadmap">
+        <li class="done">Cadrage narratif & mood (OK)</li>
+        <li class="done">User flow initial (OK)</li>
+        <li class="wip">UI dark v1 + typographie (en cours)</li>
+        <li class="wip">Prototype cliquable (en cours)</li>
+        <li>Intégration des sons + transitions</li>
+        <li>Tests utilisateurs (5–7 personnes)</li>
+        <li>Itérations UX & polishing</li>
+      </ul>
+    </section>
+
+    <!-- CTA bas de page -->
+    <section class="section container" style="padding-top:0">
+      <div class="hero-cta">
+        <a class="btn" href="https://www.figma.com/design/DQpiNAx3nlh5wE1pDrFdLM/Signal-Perdu?node-id=0-1" target="_blank" rel="noopener">Voir la maquette Figma</a>
+        <a class="btn btn-secondary" href="index.html#contact">Me contacter</a>
+        <a class="btn btn-ghost" href="index.html">← Retour au portfolio</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Yannis Dejean</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
