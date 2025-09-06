@@ -120,19 +120,13 @@ body.dark-mode header.site-header{
 @media (max-width:768px){ .nav-links{ display:none; } }
 
 /* Bouton Thème */
-#theme-toggle{
-  border:1px solid var(--border);
-  background:#fff;
-  color:#111;
-  padding:.5rem .8rem;
-  border-radius:12px;
-  cursor:pointer;
-}
-:root.dark #theme-toggle,
-body.dark-mode #theme-toggle{
+#theme-toggle {
+  border: 1px solid var(--border);
   background: var(--card);
   color: var(--text);
-  border:1px solid var(--border);
+  padding: .5rem .8rem;
+  border-radius: 12px;
+  cursor: pointer;
 }
 
 /* ====== Hero ====== */
@@ -238,21 +232,23 @@ a.btn:visited{ color: var(--btn-fg) !important; }
 .slide-meta p{ margin:0; color: var(--muted); }
 .slide-actions{ display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
 
-/* Flèches */
-.carousel-btn{
-  position: absolute; top: 50%; translate: 0 -50%;
-  z-index: 2; width: 40px; height: 40px;
+/* Flèches carousel */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
   border: 1px solid var(--border);
-  background: #fff; color:#111;
-  border-radius: 12px; cursor: pointer;
-  display: grid; place-items: center;
+  background: var(--card);
+  color: var(--text);
+  border-radius: 12px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
   box-shadow: var(--shadow);
 }
-.carousel-btn:hover{ filter: brightness(1.03); }
-.carousel-btn.prev{ left: 10px; }
-.carousel-btn.next{ right: 10px; }
-:root.dark .carousel-btn,
-body.dark-mode .carousel-btn{ background: var(--card); color: var(--text); }
 
 /* Points */
 .carousel-dots{ display:flex; gap:8px; justify-content:center; margin-top:14px; }
@@ -293,11 +289,13 @@ body.dark-mode .carousel-btn{ background: var(--card); color: var(--text); }
 @media (min-width: 1100px){ .cards-grid > .card{ grid-column: span 4; } }
 .card-head h3{ margin: .25rem 0 .15rem; font-size: 1.05rem; }
 .card .meta{ color: var(--muted); font-size: .95rem; }
-.badge{
+
+/* Badge */
+.badge {
   display: inline-block;
   border: 1px solid var(--border);
-  background: #fff;
-  color: #111;
+  background: var(--card);
+  color: var(--text);
   padding: .25rem .5rem;
   border-radius: 999px;
   font-weight: 700;
@@ -321,23 +319,28 @@ body.dark-mode .badge{
   border:1px solid var(--border);
   background:#fff; color:#111;
 }
-:root.dark .contact-form input,
-:root.dark .contact-form textarea,
-body.dark-mode .contact-form input,
-body.dark-mode .contact-form textarea{
-  background:#0f1113; color:var(--text); border:1px solid var(--border);
+/* Inputs contact */
+.contact-form input,
+.contact-form textarea {
+  padding: .85rem .9rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
 }
 
-/* ====== Footer ====== */
-footer.site-footer{
-  border-top:1px solid var(--border);
-  background:#FBF8F3;
-  color:var(--muted);
+/* Footer */
+footer.site-footer {
+  border-top: 1px solid var(--border);
+  background: var(--card);
+  color: var(--muted);
 }
-footer.site-footer .container{
-  padding-block:18px;
-  display:flex; align-items:center; justify-content:center;
-  font-size:.95rem;
+footer.site-footer .container {
+  padding-block: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .95rem;
 }
 
 /* ====== Toast ====== */

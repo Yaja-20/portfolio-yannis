@@ -6,22 +6,6 @@
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
 
-/* -------- 1) Typewriter (optionnel) -------- */
-(function typewriterInit() {
-  const el = document.getElementById('typewriter');
-  if (!el) return;
-  const text = el.textContent.trim() || "Chaque ligne de code est un pas vers l’avenir";
-  el.textContent = '';
-  let i = 0;
-  const tick = () => {
-    if (i < text.length) {
-      el.textContent += text[i++];
-      setTimeout(tick, 90);
-    }
-  };
-  tick();
-})();
-
 /* -------- 2) Thème clair/sombre (persistant) -------- */
 (function themeInit() {
   const btn = document.getElementById('theme-toggle');
