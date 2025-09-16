@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.salle {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.fond {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Zones interactives cliquables */
+.zone {
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  /* optionnel : border: 2px dashed red; pour debug */
+}
+
+/* Coordonnées à ajuster selon ton image de fond */
+#journal {
+  top: 60%;
+  left: 25%;
+  width: 8%;
+  height: 12%;
+}
+
+#photo {
+  top: 79%;
+  left: 52%;
+  width: 10%;
+  height: 14%;
+}
+
+#talkie {
+  top: 70%;
+  right: 13%;
+  width: 8%;
+  height: 18%;
+}
+
+#ordinateur {
+  top: 45%;
+  right: 20%;
+  width: 14%;
+  height: 20%;
+}
+

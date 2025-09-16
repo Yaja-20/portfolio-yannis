@@ -1,0 +1,100 @@
+/* === Général === */
+body {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  /* === Vidéo de fond === */
+  #background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.3) blur(1px);
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+    animation-delay: 0.5s;
+  }
+  
+  /* Animation de fondu */
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* === En-tête (titre + bouton son) === */
+  header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2.5em;
+  }
+  
+  /* === Bouton son (🔊 / 🔇) === */
+  #toggle-sound {
+    background-color: transparent;
+    border: none;
+    color: #f0f0f0;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  #toggle-sound:hover {
+    transform: scale(1.2);
+  }
+  
+  /* === Paragraphes d'introduction === */
+  .intro-line {
+    opacity: 0;                      /* invisible au début */
+    transform: translateY(10px);     /* décalage vers le bas */
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    max-width: 800px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+  
+  /* === Bouton "Commencer l’enquête" === */
+  .btn {
+    margin-top: 30px;
+    background-color: #5a4e4e;
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background 0.3s, opacity 0.8s ease, transform 0.8s ease;
+    
+    /* Apparition différée */
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  
+  .btn:hover {
+    background-color: #7b6666;
+  }
+  

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Signal Perdu - Intro</title>
+  <button id="toggle-sound">🔊</button>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="videos/pluie.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la vidéo HTML5.
+      </video>
+      <audio id="bg-audio" autoplay loop>
+        <source src="audio/pluie_orage.mp3" type="audio/mpeg">
+        Votre navigateur ne supporte pas l’audio HTML5.
+      </audio>            
+  <h1>Signal Perdu</h1>
+
+  <p class="intro-line"><em>Quelque part, au sommet des montagnes, une station météo s’est tue…</em></p>
+<p class="intro-line">Aucun signal. Aucun appel. Juste le silence…<br>Et une tempête qui approche.</p>
+<p class="intro-line">Vous êtes seul, envoyé pour comprendre ce qu’il s’est passé.</p>
+<p class="intro-line">Une seule pièce verrouillée, des indices éparpillés…<br>et un compte à rebours naturel implacable, invisible, insidieux.</p>
+<p class="intro-line">Chaque choix, pas, direction vous rapproche de la vérité… ou de l’oubli.</p>
+
+  <button class="btn" onclick="location.href='choix.html'">Commencer l’enquête</button>
+  <script src="scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+html, body { 
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #f2f2f2;
+  font-family: 'Georgia', serif;
+}
+
+.full-page-image {
+  width: 100vw;
+  height: 100vh;
+
+  /* 🔽 CHANGEMENTS ICI */
+  background-size: contain;              /* au lieu de cover */
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Le background s’affiche dans la zone de contenu (rétrécie par le padding) */
+  padding: 4vh 4vw;                      /* ajuste pour réduire/agrandir l’image */
+  background-origin: content-box;
+  background-clip: content-box;
+
+  position: relative;
+}
+
+/* Images de fond spécifiques */
+.full-page-image.journal    { background-image: url('../images/journal.jpg'); }
+.full-page-image.photo      { background-image: url('../images/photo.jpg'); }
+.full-page-image.talkie     { background-image: url('../images/talkie.jpg'); }
+.full-page-image.ordinateur { background-image: url('../images/ordinateur.jpg'); }
+
+/* Zone cliquable pour revenir à index.html */
+.retour-zone {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 320px;
+  height: 60px;
+  cursor: pointer;
+}
